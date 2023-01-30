@@ -1,25 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Typography from "./components/common/Typography/Typography";
+import Button from "./components/common/Button/Button";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Button type="secondary">
+        <Typography type="paragraph">GUARDAR</Typography>
+      </Button>
+      <Typography type="paragraph">PARRAFO 1</Typography>
+      <Typography type="title">TITULO 2</Typography>
+    </>
   );
 }
 

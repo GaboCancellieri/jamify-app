@@ -1,0 +1,11 @@
+.primary {
+  width: fit-content;
+  height: 50px;
+  background-color: orange;
+  border-radius: 10px;
+}
+
+.secondary {
+  background-color: blue;
+  border-radius: 10px;
+}

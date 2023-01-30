@@ -1,0 +1,18 @@
+.title {
+  color: orange;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.paragraph {
+  color: black;
+  font-size: 25px;
+  text-align: justify;
+}
+
+.buttonSecondary {
+  color: black;
+  font-size: 25px;
+  text-align: justify;
+}
