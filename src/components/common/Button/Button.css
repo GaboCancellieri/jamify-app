@@ -1,11 +1,22 @@
-.primary {
+.button {
   width: fit-content;
+  cursor: pointer;
+  border: 0px;
+  box-shadow: 2px 2px 5px gray;
+  border-radius: 10px;
+}
+
+.primary {
   height: 50px;
   background-color: orange;
-  border-radius: 10px;
+  transition: 1s;
+}
+
+.primary:hover {
+  transition: 1s;
+  background-color: red;
 }
 
 .secondary {
   background-color: blue;
-  border-radius: 10px;
 }
