@@ -1,27 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { Button, Typography } from "./components/common";
+import { Button, Input, Typography } from "./components/common";
 
 function App() {
-  const handleGuardar = () => {
-    console.log("GUARDAR");
-  };
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleCerrar = () => {
     console.log("CERRAR");
+  };
+
+  const handleChangeUsername = (event: any) => {
+    setUsername(event.target.value);
+  };
+
+  const handleChangePassword = (event: any) => {
+    setPassword(event.target.value);
   };
 
   return (
     <div className={"appContainer"}>
       <Typography type="title">TITULO 1</Typography>
       <Typography type="paragraph">PARRAFO 1</Typography>
-      <div className={"buttonContainer"}>
-        <Button type="secondary" onClick={handleGuardar}>
-          <Typography type="paragraph">GUARDAR</Typography>
-        </Button>
-        <Button type="primary" onClick={handleCerrar}>
-          <Typography type="paragraph">CERRAR</Typography>
-        </Button>
+      <div className={"formContainer"}>
+        <Input
+          placeholder="username"
+          value={username}
+          onChange={handleChangeUsername}
+        />
+        <Input
+          placeholder="password"
+          type={"password"}
+          value={password}
+          onChange={handleChangePassword}
+        />
+        <div className={"buttonContainer"}>
+          <Button type="primary" onClick={handleCerrar}>
+            <Typography type="paragraph">LOGIN</Typography>
+          </Button>
+        </div>
       </div>
     </div>
   );

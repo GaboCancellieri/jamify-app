@@ -8,13 +8,21 @@
   background-color: antiquewhite;
 }
 
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+}
+
 .buttonContainer {
+  margin-top: 14px;
   max-width: 500px;
   width: 100%;
-  height: 200px;
+  height: fit-content;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-color: aqua;
+  justify-content: center;
+  align-items: center;
 }
