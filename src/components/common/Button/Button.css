@@ -8,15 +8,20 @@
 
 .primary {
   height: 50px;
-  background-color: orange;
+  background-color: #3B82F6;
   transition: 1s;
 }
 
 .primary:hover {
   transition: 1s;
-  background-color: red;
+  background-color: #2f6bcb;
 }
 
 .secondary {
   background-color: blue;
+}
+
+.blank {
+  background-color: none;
+  box-shadow: none;
 }
