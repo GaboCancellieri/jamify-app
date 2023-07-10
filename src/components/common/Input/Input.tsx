@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 import { InputProps } from "./types";
-import "./Input.css";
+import styles from "./Input.module.scss";
 
 const Input = ({
   value,
@@ -12,11 +12,11 @@ const Input = ({
   className = "",
 }: InputProps) => {
   return (
-    <div className={"inputContainer"}>
+    <div className={styles.inputContainer}>
       <input
-        className={classnames("inputBox", className, {
-          ["onError"]: state === "error",
-          ["onSuccess"]: state === "success",
+        className={classnames(styles.inputBox, className, {
+          [styles.onError]: state === "error",
+          [styles.onSuccess]: state === "success",
         })}
         type={type}
         value={value}

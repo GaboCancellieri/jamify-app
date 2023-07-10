@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import "./Modal.css";
+import styles from "./Modal.module.scss";
 import { ModalProps } from "./types";
 import Button from "../Button";
 import Typography from "../Typography";
@@ -14,13 +14,13 @@ const Modal = ({
 }: ModalProps) => {
   return (
     <div
-      className={classnames("modalContainer", {
-        ["isActive"]: isActive,
-        ["isVisible"]: isActive,
+      className={classnames(styles.modalContainer, {
+        [styles.isActive]: isActive,
+        [styles.isVisible]: isActive,
       })}
     >
-      <div className={"modalContent"} style={{ width, height }}>
-        <div className={"buttonContainer"}>
+      <div className={styles.modalContent} style={{ width, height }}>
+        <div className={styles.buttonContainer}>
           <Button type="blank" onClick={() => onCancel()}>
             <Typography type="buttonTextBlack">X</Typography>
           </Button>

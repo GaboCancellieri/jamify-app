@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Input, Modal, Typography } from "..";
-import "./LoginModal.css";
+import styles from "./LoginModal.module.scss";
 import { LoginModalProps } from "./types";
 
 const LoginModal = ({ onCancel, isActive = false }: LoginModalProps) => {
@@ -27,16 +27,16 @@ const LoginModal = ({ onCancel, isActive = false }: LoginModalProps) => {
       height={"fit-content"}
       onCancel={onCancel}
     >
-      <div className={"loginModalContainer"}>
-        <div className={"logoContainer"}>
+      <div className={styles.loginModalContainer}>
+        <div className={styles.logoContainer}>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/2048px-LEGO_logo.svg.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/4/46/Commons-logo.gif?20120119213415"
             alt="Lego Logo"
             width={"100px"}
             height={"100px"}
           />
         </div>
-        <div className={"inputContainer"}>
+        <div className={styles.inputContainer}>
           <Input
             placeholder={"email"}
             onChange={handleEmailChange}
@@ -49,7 +49,7 @@ const LoginModal = ({ onCancel, isActive = false }: LoginModalProps) => {
             value={password}
           ></Input>
         </div>
-        <div className={"loginButtonContainer"}>
+        <div className={styles.loginButtonContainer}>
           <Button type="primary" onClick={handleLogin}>
             <Typography type="buttonTextWhite">Iniciar Sesion</Typography>
           </Button>

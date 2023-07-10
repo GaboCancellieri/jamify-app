@@ -1,0 +1,29 @@
+.inputContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputBox {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 3px gray;
+  font-family: sans-serif;
+  font-size: small;
+  min-height: 25px;
+  padding-left: 10px;
+}
+
+.inputBox:focus {
+  outline: none;
+  box-shadow: 2px 2px 3px lightskyblue;
+}
+
+.onError {
+  box-shadow: 2px 2px 3px red;
+}
+
+.onSuccess {
+  box-shadow: 2px 2px 3px lightgreen;
+}

@@ -1,11 +1,14 @@
 import React from "react";
 import { ButtonProps } from "./types";
-import "./Button.css";
+import styles from "./Button.module.scss";
 import classnames from "classnames";
 
 const Button = ({ type, children, onClick }: ButtonProps) => {
   return (
-    <button className={classnames("button", type)} onClick={onClick}>
+    <button
+      className={classnames(styles.button, styles[type])}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

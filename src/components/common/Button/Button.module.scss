@@ -1,0 +1,29 @@
+@import "../../../styles/colors.scss";
+
+.button {
+  width: fit-content;
+  cursor: pointer;
+  border: 0px;
+  box-shadow: 2px 2px 5px $colorDarkGray;
+  border-radius: 10px;
+}
+
+.primary {
+  height: 50px;
+  background-color: $colorPrimary;
+  transition: 1s;
+}
+
+.primary:hover {
+  transition: 1s;
+  background-color: $colorPrimaryHover;
+}
+
+.secondary {
+  background-color: $colorSecondary;
+}
+
+.blank {
+  background-color: none;
+  box-shadow: none;
+}
