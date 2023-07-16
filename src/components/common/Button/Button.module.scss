@@ -4,26 +4,28 @@
   width: fit-content;
   cursor: pointer;
   border: 0px;
-  box-shadow: 2px 2px 5px $colorDarkGray;
-  border-radius: 10px;
+  min-height: 52px;
 }
 
 .primary {
-  height: 50px;
-  background-color: $colorPrimary;
-  transition: 1s;
-}
-
-.primary:hover {
-  transition: 1s;
-  background-color: $colorPrimaryHover;
+  border-radius: 12px;
+  background: $colorPrimary;
 }
 
 .secondary {
-  background-color: $colorSecondary;
+  border-radius: 12px;
+  background: $colorSecondary;
 }
 
 .blank {
   background-color: none;
-  box-shadow: none;
+}
+
+.dark {
+  border-radius: 12px;
+  background: $colorDarkerGray;
+}
+
+.full {
+  width: 100%;
 }

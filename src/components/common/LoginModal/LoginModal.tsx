@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Button, Input, Modal, Typography } from "..";
 import styles from "./LoginModal.module.scss";
 import { LoginModalProps } from "./types";
+import { useLoginService } from "../../../api/api";
 
 const LoginModal = ({ onCancel, isActive = false }: LoginModalProps) => {
+  const loginService = useLoginService();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,8 +18,7 @@ const LoginModal = ({ onCancel, isActive = false }: LoginModalProps) => {
   };
 
   const handleLogin = () => {
-    console.log("VOY A INICIAR SESION!");
-    console.log({ email, password });
+    loginService.login(email, password);
   };
 
   return (
@@ -51,7 +52,7 @@ const LoginModal = ({ onCancel, isActive = false }: LoginModalProps) => {
         </div>
         <div className={styles.loginButtonContainer}>
           <Button type="primary" onClick={handleLogin}>
-            <Typography type="buttonTextWhite">Iniciar Sesion</Typography>
+            <Typography type="buttonTextPrimary">Iniciar Sesion</Typography>
           </Button>
         </div>
       </div>

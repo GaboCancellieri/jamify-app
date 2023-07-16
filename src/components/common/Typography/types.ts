@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
+import { TYPOGRAPHY_TYPE_VARIANTS } from "./constants";
 
 export interface TypographyProps {
-  type: "title" | "paragraph" | "buttonTextWhite" | "buttonTextBlack";
+  type: keyof typeof TYPOGRAPHY_TYPE_VARIANTS;
   children: ReactNode;
 }

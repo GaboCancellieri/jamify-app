@@ -22,7 +22,7 @@ const Modal = ({
       <div className={styles.modalContent} style={{ width, height }}>
         <div className={styles.buttonContainer}>
           <Button type="blank" onClick={() => onCancel()}>
-            <Typography type="buttonTextBlack">X</Typography>
+            <Typography type="buttonTextSecondary">X</Typography>
           </Button>
         </div>
         {children}

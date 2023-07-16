@@ -1,6 +1,9 @@
 // THEME
-$colorPrimary: #3B82F6;
-$colorSecondary: #0000ff;
+$colorPrimary: #F8B527;
+$colorSecondary: #AA2FB5;
+$colorSecondaryDark: #2D0D29;
+
+// BUTTON COLORS
 $colorSuccess: #22c55e;
 $colorInfo: #3b82f6;
 $colorWarning: #f59e0b;
@@ -10,12 +13,18 @@ $colorDanger: #ef4444;
 // HOVERS
 $colorPrimaryHover: #2f6bcb;
 
-// COLORS
+// W.W.
 $colorWhite: #ffffff;
 $colorAlmostWhite: #efefef;
-$colorGray: #c9c9c9;
+
+// GRAY
 $colorTextGrayExtraLight: #e7e7e7;
+$colorGray: #c9c9c9;
+$colorRainyGray: #A5A5A5;
 $colorDarkGray: #808080;
-$colorAlmostBlack: #050505;
+$colorDarkerGray: #2C2C2C;
+
+// BLACK
+$colorAlmostBlack: #121212;
 $colorBlack: #000000;
 $colorTransparent: rgba(0, 0, 0, 0);
