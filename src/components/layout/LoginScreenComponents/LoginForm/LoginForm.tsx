@@ -66,7 +66,7 @@ const LoginForm = () => {
         <div className={styles.loginButtonContainer}>
           <Button type="dark" isFullSize onClick={handleLogin}>
             <Typography type="buttonTextSecondary">
-              Enter with Google
+              Login with Google
             </Typography>
           </Button>
         </div>

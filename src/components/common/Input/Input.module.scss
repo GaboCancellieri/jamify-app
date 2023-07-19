@@ -8,13 +8,13 @@
 }
 
 .inputBox {
+  font-family: "Raleway-SemiBold";
   border-radius: 12px;
   border: none;
   min-height: 25px;
   height: 52px;
   background-color: $colorDarkerGray;
-  color: #A5A5A5;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: $colorRainyGray;
   font-size: 17px;
   font-style: normal;
   line-height: normal;
@@ -22,14 +22,18 @@
 }
 
 input::placeholder {
-  color: #A5A5A5;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: $colorDarkGray;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
+input:focus {
+  outline: none !important;
+    border:1px solid $colorPrimary;
+    box-shadow: 0 0 5px $colorPrimary;
+}
 
 .onError {
   box-shadow: 2px 2px 3px red;
