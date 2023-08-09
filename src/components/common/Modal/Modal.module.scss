@@ -1,3 +1,5 @@
+@import '../../../styles/zIndexes.scss';
+
 .modalContainer {
   position: fixed;
   display: flex;
@@ -11,7 +13,7 @@
   opacity: 0;
   visibility: hidden;
   background: rgba(0, 0, 0, 0.55);
-  z-index: 100;
+  z-index: z('modalOverlay');
 }
 
 .isActive {
@@ -35,7 +37,7 @@
   border-radius: 20px;
   background: #EFEFEF;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.38);
-  z-index: 101;
+  z-index: z('modalContent');
 }
 
 .buttonContainer {

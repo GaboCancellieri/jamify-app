@@ -1,0 +1,41 @@
+.registerFormContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 480px;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.cancelButton {
+  padding: 5px 5px;
+  width: 50%;
+}
+
+.submittButton {
+  padding: 5px 5px;
+  width: 50%;
+}
+
+.submittButtonContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

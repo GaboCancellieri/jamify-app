@@ -19,6 +19,7 @@
 
 .blank {
   background-color: none;
+  background: none;
 }
 
 .dark {
@@ -26,6 +27,43 @@
   background: $colorDarkerGray;
 }
 
+.danger {
+  border-radius: 12px;
+  background: $colorDanger;
+}
+
+.disabled {
+  border-radius: 12px;
+  background: $colorRainyGray;
+  cursor: default;
+}
+
 .full {
   width: 100%;
+}
+
+.pulseButton:not(:disabled) {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background: $colorPrimary;
+  transition: 1s;
+  box-shadow: 0 0 0 0 rgba($colorPrimary, .5);
+}
+.pulseButton:hover:not(:disabled) {
+  animation: pulse 1.5s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px rgba($colorPrimary, 0);
+  }
+    100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba($colorPrimary, 0);
+  }
 }

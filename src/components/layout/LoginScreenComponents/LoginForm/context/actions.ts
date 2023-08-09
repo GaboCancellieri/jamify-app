@@ -2,6 +2,7 @@ export const SET_LOGIN_EMAIL = "SET_LOGIN_EMAIL";
 export const SET_LOGIN_PASSWORD = "SET_LOGIN_PASSWORD";
 export const SET_LOGIN_IS_SUBMITTED = "SET_LOGIN_IS_SUBMITTED";
 export const SET_LOGIN_IS_ERROR = "SET_LOGIN_IS_ERROR";
+export const SET_LOGIN_IS_LOGGED = "SET_LOGIN_IS_LOGGED";
 export const RESET_LOGIN_INPUTS = "RESET_LOGIN_INPUTS";
 
 export const setLoginEmail = (email: string) => ({
@@ -22,6 +23,11 @@ export const setLoginIsSubmitted = (isSubmitted: boolean) => ({
 export const setLoginIsError = (isError: boolean) => ({
   action: SET_LOGIN_IS_ERROR,
   payload: { isError },
+});
+
+export const setLoginIsLogged = (isLogged: boolean) => ({
+  action: SET_LOGIN_IS_LOGGED,
+  payload: { isLogged },
 });
 
 export const resetLoginInputs = () => ({ action: RESET_LOGIN_INPUTS });
