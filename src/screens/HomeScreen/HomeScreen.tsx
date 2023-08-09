@@ -1,20 +1,23 @@
-import React, { useState } from "react";
-import { Button, LoginModal, Typography } from "../../components/common";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Button, Typography } from "../../components/common";
 
 const HomeScreen = () => {
-  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
-  const handleClose = () => {
-    setShowModal(false);
+  const handleJoinNow = () => {
+    navigate("/login");
   };
+
   return (
     <>
-      <Typography type="smallTextPrimary">TITULO 1</Typography>
-      <Typography type="smallTextPrimary">PARRAFO 1</Typography>
-      <LoginModal onCancel={handleClose} isActive={showModal}></LoginModal>
-      <Button type="primary" onClick={() => setShowModal(true)}>
-        <Typography type="buttonTextPrimary">Login</Typography>
+      <Button type="primary" onClick={handleJoinNow}>
+        <Typography type="buttonTextPrimary">Join Now</Typography>
       </Button>
+      {/* <IntroSection />
+      <FeaturesSection />
+      <AboutSection />
+      <Footer /> */}
     </>
   );
 };

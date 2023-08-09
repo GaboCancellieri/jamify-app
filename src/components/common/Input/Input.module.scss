@@ -36,9 +36,19 @@ input:focus {
 }
 
 .onError {
-  box-shadow: 2px 2px 3px red;
+  box-shadow: 2px 2px 3px darkred;
 }
 
 .onSuccess {
-  box-shadow: 2px 2px 3px lightgreen;
+  box-shadow: 2px 2px 3px $colorSuccess;
+}
+
+.inputIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+  right: 5px;
 }

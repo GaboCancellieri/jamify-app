@@ -1,15 +1,20 @@
-import React, { useReducer } from "react";
-import { Button, Card, Input, Line, Typography } from "../../../common";
+import React, { useEffect, useReducer } from "react";
+import { Button, Icon, Input, Line, Typography } from "../../../common";
 import styles from "./LoginForm.module.scss";
 import { useLoginService } from "../../../../api/api";
 import { loginInitialState, loginReducer } from "./context/reducer";
 import {
   setLoginEmail,
+  setLoginIsLogged,
   setLoginIsSubmitted,
   setLoginPassword,
 } from "./context/actions";
+import { FLAT_COLOR_ICONS } from "../../../../constants/icon";
+import { useNavigate } from "react-router-dom";
+import { LoginFormProps } from "./types";
 
-const LoginForm = () => {
+const LoginForm = ({ onRegister }: LoginFormProps) => {
+  const navigate = useNavigate();
   const loginService = useLoginService();
   const [loginState, loginDispatch] = useReducer(
     loginReducer,
@@ -24,54 +29,74 @@ const LoginForm = () => {
     loginDispatch(setLoginPassword(event.target.value));
   };
 
-  const handleLogin = () => {
-    loginDispatch(setLoginIsSubmitted(true));
-    loginService.login(loginState.email, loginState.password);
+  const handleLogin = async () => {
+    try {
+      loginDispatch(setLoginIsSubmitted(true));
+      const result = await loginService.login(
+        loginState.email,
+        loginState.password
+      );
+      console.log(result);
+      if (result) {
+        localStorage.setItem("accessToken", result.accessToken);
+        localStorage.setItem("refreshToken", result.refreshToken);
+        loginDispatch(setLoginIsLogged(true));
+      }
+    } catch (error) {
+      console.log({ error });
+    }
   };
 
+  useEffect(() => {
+    if (loginState.isLogged) {
+      navigate("/feed");
+    }
+  }, [loginState.isLogged, navigate]);
+
   return (
-    <div className={styles.cardContainer}>
-      <Card width="560px" height="420px">
-        <div className={styles.cardContent}>
-          <div className={styles.inputContainer}>
-            <Input
-              placeholder={"username"}
-              onChange={handleEmailChange}
-              value={loginState.email}
-            ></Input>
-            <Input
-              type={"password"}
-              placeholder={"password"}
-              onChange={handlePasswordChange}
-              value={loginState.password}
-            ></Input>
-          </div>
-        </div>
-        <div className={styles.loginButtonContainer}>
-          <Button type="secondary" isFullSize onClick={handleLogin}>
-            <Typography type="buttonTextSecondary">Login</Typography>
-          </Button>
-        </div>
-        <div className={styles.loginTextContainer}>
-          <Typography type="smallTextPrimary">
-            ¿Forgot your password?
-          </Typography>
-        </div>
-        <Line width="526px" height="2px" color="#2C2C2C" />
-        <div className={styles.loginButtonContainer}>
-          <Button type="primary" isFullSize onClick={handleLogin}>
-            <Typography type="buttonTextPrimary">Register</Typography>
-          </Button>
-        </div>
-        <div className={styles.loginButtonContainer}>
-          <Button type="dark" isFullSize onClick={handleLogin}>
+    <>
+      <div className={styles.inputContainer}>
+        <Input
+          placeholder={"username"}
+          onChange={handleEmailChange}
+          value={loginState.email}
+        ></Input>
+        <Input
+          type={"password"}
+          placeholder={"password"}
+          onChange={handlePasswordChange}
+          value={loginState.password}
+        ></Input>
+      </div>
+      <div className={styles.loginButtonContainer}>
+        <Button type="secondary" isFullSize onClick={handleLogin}>
+          <Typography type="buttonTextSecondary">Login</Typography>
+        </Button>
+      </div>
+      <div className={styles.loginTextContainer}>
+        <Typography type="smallTextPrimary">¿Forgot your password?</Typography>
+      </div>
+      <Line width="526px" height="2px" color="#2C2C2C" />
+      <div className={styles.loginButtonContainer}>
+        <Button type="primary" isFullSize onClick={onRegister}>
+          <Typography type="buttonTextPrimary">Register</Typography>
+        </Button>
+      </div>
+      <div className={styles.loginButtonContainer}>
+        <Button type="dark" isFullSize onClick={handleLogin}>
+          <div className={styles.googleButtonContent}>
+            <Icon
+              className={styles.googleIcon}
+              iconId="FcGoogle"
+              iconDesign={FLAT_COLOR_ICONS}
+            ></Icon>
             <Typography type="buttonTextSecondary">
-              Login with Google
+              <span>Login with Google</span>
             </Typography>
-          </Button>
-        </div>
-      </Card>
-    </div>
+          </div>
+        </Button>
+      </div>
+    </>
   );
 };
 

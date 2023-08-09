@@ -5,4 +5,5 @@ export const TYPOGRAPHY_TYPE_VARIANTS = {
   smallTextPrimary: "smallTextPrimary",
   buttonTextPrimary: "buttonTextPrimary",
   buttonTextSecondary: "buttonTextSecondary",
+  dropdownText: "dropdownText",
 };

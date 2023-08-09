@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./LoginScreen.module.scss";
 import {
-  LoginForm,
+  CardForm,
   SessionLogin,
 } from "../../components/layout/LoginScreenComponents";
+import { useNavigate } from "react-router-dom";
 
 const LoginScreen = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("accessToken")) {
+      navigate("/feed");
+    }
+  }, [navigate]);
+
+  if (localStorage.getItem("accessToken")) return null;
+
   return (
     <div className={styles.loginScreenContainer}>
       <div className={styles.loginScreenContent}>
-        <LoginForm />
+        <CardForm />
         <SessionLogin />
       </div>
     </div>

@@ -3,4 +3,5 @@ export interface LoginState {
   password: string;
   isSubmitted: boolean;
   isError: boolean;
+  isLogged: boolean;
 }
