@@ -6,4 +6,5 @@ export const BUTTON_TYPE_VARIANTS = {
   success: "success",
   warning: "warning",
   danger: "danger",
+  text: "text",
 };

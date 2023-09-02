@@ -1,0 +1,41 @@
+@import "../../../../styles/colors.scss";
+
+.aboutSectionContainer {
+    position: relative;
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient($colorSecondaryDark, $colorBlack);
+    padding-top: 4rem;
+  }
+
+  .aboutTitleSectionContainer {
+    position: relative;
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    img {
+      margin: 0 25px;
+      width: 69px;
+    }
+  }
+
+.aboutTextSectionContainer {
+  width: 850px;
+  text-align: justify;
+}
+
+.joinText {
+  color: $colorPrimary;
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
