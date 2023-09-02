@@ -7,4 +7,6 @@ export const TYPOGRAPHY_TYPE_VARIANTS = {
   buttonTextSecondary: "buttonTextSecondary",
   dropdownText: "dropdownText",
   itemTitle: "itemTitle",
+  whiteText: "whiteText",
+  aboutTitle: "aboutTitle",
 };
