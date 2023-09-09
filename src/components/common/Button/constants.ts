@@ -7,4 +7,5 @@ export const BUTTON_TYPE_VARIANTS = {
   warning: "warning",
   danger: "danger",
   text: "text",
+  joinNow: "joinNow",
 };
