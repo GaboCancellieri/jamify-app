@@ -1,0 +1,52 @@
+.introSectionContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.introContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    height: 475px;
+
+    img {
+        width: 55px;
+        margin-right: 20px;
+    }
+}
+
+
+.wordsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.imageIntroContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    height: 475px;
+}
+
+.loginButtonContainer{
+    margin-top: 2rem;
+}
+
+.imageIntro {
+    width: 669px;
+    height: 669px;
+    flex-shrink: 0;
+    border-radius: 669px;
+    border: 2px dashed #AA2FB5;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(45, 13, 41, 0.00) 77.6%, #2D0D29 99.99%, rgba(45, 13, 41, 0.00) 100%);
+}
