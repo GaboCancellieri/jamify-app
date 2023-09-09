@@ -8,5 +8,6 @@ export const TYPOGRAPHY_TYPE_VARIANTS = {
   dropdownText: "dropdownText",
   itemTitle: "itemTitle",
   whiteText: "whiteText",
+  whiteBigText: "whiteBigText",
   aboutTitle: "aboutTitle",
 };

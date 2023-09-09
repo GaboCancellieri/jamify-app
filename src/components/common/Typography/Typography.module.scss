@@ -3,9 +3,9 @@
 .logo {
   width: 100%;
   text-align: center;
-  font-family: "Lato-BoldItalic";
-  font-size: 64px;
-  font-style: italic;
+  font-family: "Lato-Italic";
+  font-size: 70px;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
   background: linear-gradient(180deg, $colorPrimary 0%, $colorSecondary 100%);
@@ -89,6 +89,16 @@
   text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.80);
   font-family: "Raleway-Regular";
   font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 132.4%; 
+}
+
+.whiteBigText {
+  color: #FFF;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.80);
+  font-family: "Raleway-SemiBold";
+  font-size: 35px;
   font-style: normal;
   font-weight: 500;
   line-height: 132.4%; 

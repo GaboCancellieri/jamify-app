@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Typography } from "../../components/common";
 import FeaturesSection from "../../components/layout/HomeScreenComponents/FeaturesSection";
 import AboutSection from "../../components/layout/HomeScreenComponents/AboutSection";
+import Footer from "../../components/layout/HomeScreenComponents/Footer";
 
 const HomeScreen = () => {
   const navigate = useNavigate();
@@ -18,8 +19,9 @@ const HomeScreen = () => {
       </Button> */}
       <FeaturesSection />
       <AboutSection />
+      <Footer />
       {/* <IntroSection />
-      <Footer /> */}
+       */}
     </>
   );
 };
