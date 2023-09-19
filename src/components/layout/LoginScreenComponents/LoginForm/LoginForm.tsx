@@ -12,8 +12,11 @@ import {
 import { FLAT_COLOR_ICONS } from "../../../../constants/icon";
 import { useNavigate } from "react-router-dom";
 import { LoginFormProps } from "./types";
+import { UserStateContext } from "../../../../context/UserContext/UserContext";
+import { IUserState } from "../../../../context/UserContext/types";
+import connect from "../../../../context/Store/connect";
 
-const LoginForm = ({ onRegister }: LoginFormProps) => {
+const LoginForm = ({ onRegister, currentUser }: LoginFormProps) => {
   const navigate = useNavigate();
   const loginService = useLoginService();
   const [loginState, loginDispatch] = useReducer(
@@ -21,6 +24,7 @@ const LoginForm = ({ onRegister }: LoginFormProps) => {
     loginInitialState
   );
 
+  console.log({ currentUser });
   const handleEmailChange = (event: any) => {
     loginDispatch(setLoginEmail(event.target.value));
   };
@@ -100,4 +104,11 @@ const LoginForm = ({ onRegister }: LoginFormProps) => {
   );
 };
 
-export default LoginForm;
+const mapStateToProps = [
+  {
+    context: UserStateContext,
+    mapStateToProps: ({ currentUser }: IUserState) => ({ currentUser }),
+  },
+];
+
+export default connect({ mapStateToProps })(LoginForm);
