@@ -1,0 +1,47 @@
+@import "../../../../styles/colors.scss";
+
+.topListItemContainer {
+    width: 283px;
+    height: 66px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rankContainer {
+    width: 39px;
+    height: 39.706px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 2px solid $colorBorder;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.artistContainer {
+    width: 73px;
+    height: 24.434px;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+.trackTitleContainer {
+    color: #EFEFEF;
+    font-family: "Raleway-Regular";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 15px;
+}
+
+.artistTrackContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}

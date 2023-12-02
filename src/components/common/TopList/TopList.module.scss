@@ -1,0 +1,11 @@
+@import "../../../styles/colors.scss";
+
+.topListContainer {
+    width: 307px;
+    height: 247px;
+    padding: 3rem;
+    flex-shrink: 0;
+    border: 3px $colorBorder;
+    background: $colorBlack;
+}
+

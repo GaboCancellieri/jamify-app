@@ -9,3 +9,4 @@ export { default as LoginModal } from "./LoginModal";
 export { default as Modal } from "./Modal";
 export { default as Tooltip } from "./Tooltip";
 export { default as Typography } from "./Typography";
+export { default as TopList } from "./TopList";
